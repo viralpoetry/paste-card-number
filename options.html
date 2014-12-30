@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Extension Options</title></head>
+<body>
+<p>Enter card number (16 digits):</p>
+
+<form id="frm1" action="">
+cc num: <input type="text" name="lname"><br><br>
+new password:    <input type="password" name="pass1"><br><br>
+verify password: <input type="password" name="pass2"><br><br>
+<input id="save" type="button" value="Save">
+<input id="clear" type="button" value="Clear">
+</form>
+
+<br><br>
+<div id="status"></div>
+
+<script src="lib/pbkdf2.js"></script>
+<script src="lib/aes.js"></script>
+<script src="encrypt_storage.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

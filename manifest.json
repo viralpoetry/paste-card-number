@@ -1,0 +1,25 @@
+{
+  "name": "Paste Credit Card",
+  "description": "Securely store and paste your credit card number from context menu.",
+  "version": "0.1",
+  "permissions": [
+    "contextMenus",
+    "storage"
+    ],
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["lib/aes.js", "lib/pbkdf2.js", "encrypt_storage.js", "main.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "icons": {
+    "16": "img/credit_cards.png"
+  },
+  "manifest_version": 2
+}
