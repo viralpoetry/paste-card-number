@@ -16,23 +16,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
     chrome.tabs.create({ url: chrome.extension.getURL("options.html") });
 });
 
-function store_pan_number(pan) {
-    if (!pan) {
-        //alert('Error: No value specified');
-        return;
-    }
-    // Save it using the Chrome extension storage API.
-    chrome.storage.local.set({'encrypted_pan': pan}, function() {
-        // Notify that we saved.
-        if (chrome.extension.lastError) {
-            console.log('An error occurred: ' + chrome.extension.lastError.message);
-        } else {
-            console.log('Credit card number saved.');
-        }
-    });
-}
-
-function enter_pin() {
+function enter_password() {
     var pass = prompt("Please enter password", "");
     if (pass != null) {
         return pass;
@@ -47,7 +31,7 @@ chrome.contextMenus.onClicked.addListener( function( info, tab) {
             chrome.tabs.create({ url: chrome.extension.getURL("options.html") });
         } else {
             // ask for password
-            password = enter_pin();
+            password = enter_password();
             pan = decrypt(password, result.encrypted_pan);
             delete password;
             chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
