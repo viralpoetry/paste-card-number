@@ -19,7 +19,10 @@
     }
   ],
   "icons": {
-    "16": "img/credit_cards.png"
+    "16": "img/credit_cards16.png",
+    "64": "img/credit_cards64.png",
+    "128": "img/credit_cards128.png",
+    "256": "img/credit_cards256.png"
   },
   "manifest_version": 2
 }
