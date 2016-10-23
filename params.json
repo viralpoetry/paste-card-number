@@ -1,6 +1,6 @@
 {
   "name": "Paste-card-number",
   "tagline": "Chrome extension for storing and pasting credit card information to the websites.",
-  "body": "บัตรจำนวน ================= วางส่วนขยายของ Chrome สำหรับการจัดเก็บและข้อมูลบัตรเครดิตวางไปยังเว็บไซต์ ### สิ่งที่ต้องทำ: * * * * * * * * การตรวจสอบรหัสผ่านทำให้รูปแบบ CSS สำหรับ options.html * พร้อมรับคำเปลี่ยนรหัสผ่าน ... * เพิ่มการเชื่อมโยงไปยัง Github หน้าตัวเลือก ### Dev บันทึก: * อูบุนตู - นามสกุลจะถูกเก็บไว้ที่ ~ / .config / Google -chrome / default / ส่วนขยาย * แสดงการจัดเก็บข้อมูลท้องถิ่น - chrome.storage.local.get null (ฟังก์ชั่น (ทั้งหมด) {console.log (ทั้งหมด)});\r\n",
+  "body": "paste-card-number\r\n=================\r\n\r\nChrome extension for storing and pasting credit card information to the websites.\r\n\r\n\r\n\r\n###Todo:\r\n  * password verification\r\n  * make css style for options.html\r\n  * change password prompt...\r\n  * add Github link to the options page\r\n\r\n\r\n\r\n###Dev notes:\r\n  * Ubuntu\r\n    - extensions are stored at ~/.config/google-chrome/Default/Extensions\r\n\r\n  * Show local storage\r\n    - chrome.storage.local.get(null,function(all){console.log(all)});\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
